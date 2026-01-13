@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/Build-passing-brightgreen) [![GitHub Repo stars](https://img.shields.io/github/stars/unpwnabl/tna)](https://github.com/unpwnabl/Game-Engine/stargazers) ![License](https://img.shields.io/github/license/unpwnabl/tna)
 </br>
-TNA - The Terminal-Nucleic Acide animation, completely in bash 
+TNA - The Terminal-Nucleic Acide animation, completely in [Bash](https://www.gnu.org/software/bash/). 
 
 ![](/img/example.svg)
 

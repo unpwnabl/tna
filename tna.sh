@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#
+# Author: Unpwnabl <https://www.github.com/unpwnabl>
+# Date: 13/01/2026
+# License: GPL-3.0
 
 # If your terminal doesn't recognize this escape code sequence, 
 # then change it and it will apply top all
