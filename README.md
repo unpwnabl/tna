@@ -13,13 +13,16 @@ To install, download all of the files from the [github repository](https://www.g
 git pull https://github.com/unpwnabl/tna
 cd tna
 ```
+Then, run the [make](https://www.gnu.org/software/make/) command `make install` to install, or `make uninstall` to uninstall the program.
+```bash
+make install
+```
 
 ## Run
 
-To run the program, make the `tna.sh` file executable and build:
+To run the program, after installing using `make`, just type:
 ```bash
-chmod +x tna.sh
-./tna.sh
+tna
 ```
 
 ## Contributing
