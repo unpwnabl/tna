@@ -1,12 +1,37 @@
 #!/usr/bin/env bash
 #
 # Author: Unpwnabl <https://www.github.com/unpwnabl>
-# Date: 13/01/2026
+# Date: 04/02/2026
 # License: GPL-3.0
 
 # If your terminal doesn't recognize this escape code sequence, 
 # then change it and it will apply top all
 escape="\033"
+
+speed=0.125
+
+for i in "$@"; do
+	case $i in
+		-h|--help)
+			echo -e "Usage:\n\t-h, --help\t\t\t\tDisplay this message\n\t-s=[option], --speed=[option]\t\tSet refresh speed\n\t-e=[option], --escape-code=[option]\tSet the ANSI escape code\n\t\t\t\t\t\tdefault = '\\\033'"
+			exit
+			;;
+		-s=*|--speed=*)
+			speed="${i#*=}"
+			shift
+			;;
+		-e=*|--escape-code=*)
+			escape="${i#*=}"
+			shift
+			;;
+		-*|--*)
+			echo "Error: Unrecognized option $i. Please use \"-h\" or \"--help\" for more informations"
+			exit 1
+			;;
+		*)
+			;;
+	esac
+done
 
 # Restore terminal when exiting
 cleanup() {
@@ -74,14 +99,14 @@ clear
 
 line=0
 l_it=0
-x=5
+x=6
 y=25
 while true; do
 	for i in ${!frames[@]}; do
 		if [[ -n $frames[$i] ]]; then
 			# If it"s an End-Of-DNA, we sleep, clear and repeat
 			if [[ ${frames[$i]} == "eod" ]]; then
-				sleep .125
+				sleep $speed
 				clear
 				((line=0))
 				((l_it=0))

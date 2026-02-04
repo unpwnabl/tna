@@ -25,6 +25,15 @@ To run the program, after installing using `make`, just type:
 tna
 ```
 
+Use `-h` or `--help` to view a list of commands:
+```bash
+Usage:
+	-h, --help				            Display this message
+	-s=[option], --speed=[option]		Set refresh speed
+	-e=[option], --escape-code=[option]	Set the ANSI escape code
+						                default = '\033'
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
